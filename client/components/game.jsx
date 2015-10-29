@@ -7,5 +7,7 @@ GameStarter = React.createClass({
 });
 
 function startGame(){
-  console.log("Start a game");
+  Meteor.call('startGame', {}, (error, id) => {
+     if(error) return;
+  });
 }
