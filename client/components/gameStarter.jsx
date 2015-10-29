@@ -9,5 +9,6 @@ GameStarter = React.createClass({
 function startGame(){
   Meteor.call('startGame', {}, (error, id) => {
      if(error) return;
+     Router.go('game', {_id: id});
   });
 }
