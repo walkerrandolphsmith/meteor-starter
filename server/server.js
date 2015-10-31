@@ -8,6 +8,4 @@ function startGame(){
   });
 }
 
-Meteor.publish('game', (id) => {
-  return Games.find();
-});
+Meteor.publish('game', (id) => { return Games.find(); });
